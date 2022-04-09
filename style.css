@@ -1,0 +1,75 @@
+body {
+    font-family: Arial;
+    margin: 0;
+	background-color: #fff;
+    background-image: url(back.jpg);
+}
+
+.main-interface {
+	margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    width: 800px;
+    grid-template-columns: 200px 600px;
+    grid-template-rows: 80px 600px;
+    grid-template-areas:
+            "header header "
+            "left-menu main-game";
+    border: 4px solid #111;
+}
+
+.header {
+    grid-area: header;
+    background-color: rgb(14, 66, 70);
+    text-align: center;
+    color: #fff;
+    font-size: 15px;
+
+    border-width: 0 0 4px 0;
+    width: 100%;
+
+}
+
+.left-menu {
+    grid-area: left-menu;
+    text-align: center;
+	color: #fff;
+    border-width: 0 4px 0 0;
+    font-size: 1.3rem;
+
+}
+
+.time {
+    border-width: 0 0 4px 0;
+    font-size: 15px;
+}
+
+.level {
+    border-width: 0 0 4px 0;
+    font-size: 15px;
+}
+
+.game-field {
+    grid-area: main-game;
+    display: grid;
+    padding: 2px;
+    background-color: #111;
+}
+
+.start {
+	cursor: pointer;
+    margin-top: 60px;
+    color: #fff;
+    font-size: 15px;
+    background: rgb(14, 66, 70);
+    padding: 1em 3em;
+    border-width: 0px;
+}
+.start:hover { background: rgb(25, 119, 118); }
+.start:active { background: rgb(14, 66, 70); }
+
+.square {
+    size: auto;
+    margin: 1px;
+    border-radius: 5%;
+}
